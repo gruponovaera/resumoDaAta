@@ -1,7 +1,7 @@
-# Resumo da Ata do Grupo Graça de NA.
+# Resumo da Ata do Grupo Nova Era OnLine de NA.
 
 Este é um projeto que utiliza o Google Apps Script para automatizar a geração de resumos a partir de uma planilha do Google Sheets e enviar esses resumos via WhatsApp.
-Trata-se de um fork do projeto original do grupo QuarenteNA: https://github.com/grupoquarentena/resumoDaAta
+Trata-se de um fork do projeto original do Grupo QuarenteNA e do Grupo Graça: https://github.com/grupoquarentena/resumoDaAta https://github.com/grupograca/resumoDaAta
 
 ## Como Funciona
 
@@ -34,7 +34,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas, propo
 
 ## Licença
 
-Este projeto é licenciado sob a [Licença MIT](LICENSE).
+Este projeto é licenciado sob a Licença MIT.
 
 ---
 
