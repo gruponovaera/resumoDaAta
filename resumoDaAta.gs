@@ -69,74 +69,73 @@ function resumoDaAta() {
 
   // Converter a data da reunião para o formato BR
   var dataReuniao = new Date(valores['A']);
-  var dataFormatada = formatarData(dataReuniao);
+  var dataFormatadaReuniao = formatarData(dataReuniao);
+
+  // Converter a data da atualização para o formato BR
+  var dataAtualiza = new Date(valores['U']);
+  var dataFormatadaAtualiza = formatarData(dataAtualiza);
 
   
   // Montar a mensagem de resumo
-  var mensagem = "*Resumo da Ata do Grupo Graça de NA*\n";
+  var mensagem = "*Resumo da Ata do Grupo Nova Era OnLine de NA*\n";
   
   // Linhas das mensagens necessárias
-  mensagem += "*Formato da Reunião*: " + valores['C'] + "\n";
-  mensagem += "*Data da Reunião*: " + dataFormatada + "\n";
-  mensagem += "*Tipo de Reunião*: " + valores['D'] + "\n";
-  mensagem += "*Dia da Reunião*: " + valores['B'] + "\n";
-  mensagem += "*Horário da Reunião*: " + valores['Z'] + "\n";
-  mensagem += "*Secretário(a)*: " + valores['E'] + "\n";
-  mensagem += "*Coordenador(a)*: " + valores['F'] + "\n";
-  mensagem += "*Presenças*: " + valores['G'] + "\n";
-  mensagem += "*Partilhas*: " + valores['H'] + "\n";
-  mensagem += "*Saldo Anterior*: R$ " + valores['P'] + "\n";
-  mensagem += "*7ª Tradição*: R$ " + valores['Q'] + "\n";
-  mensagem += "*Saldo Atual*: R$ " + valores['T'] + "\n";
+  mensagem += "*Formato da Reunião*: " + valores['B'] + "\n";
+  mensagem += "*Data da Reunião*: " + dataFormatadaReuniao + "\n";
+  mensagem += "*Coordenador(a)*: " + valores['C'] + "\n";
+  mensagem += "*Presenças*: " + valores['D'] + "\n";
+  mensagem += "*Partilhas*: " + valores['E'] + "\n";
+  mensagem += "*Saldo da 7ª Tradição*: R$ " + valores['K'] + "\n";
+  mensagem += "*Data da Atualiação*: " + dataFormatadaAtualiza + "\n";
 
   // Adicionar as linhas apenas se os valores não forem strings vazias
-  if (valores['R'] !== "") {
-    mensagem += "*Total de Despesas*: R$ " + valores['R'] + "\n";
-  }
-  if (valores['S'] !== "") {
-    mensagem += "*Descrição das Despesas*: " + valores['S'] + "\n";
-  }
-
-  if (valores['I'] !== "") {
-    mensagem += "*Visita(s)*: " + valores['I'] + "\n";
-  }
-  if (valores['J'] !== "") {
-    mensagem += "*Ingresso(s)*: " + valores['J'] + "\n";
-  }
-  if (valores['K'] !== "") {
-  mensagem += "*Nome(s) do(s) Ingressante(s)*: " + valores['K'] + "\n";
-  }
   if (valores['L'] !== "") {
-  mensagem += "*Contato(s) do(s) Ingressante(s)*: " + valores['L'] + "\n";
+    mensagem += "*Total de Despesas*: R$ " + valores['L'] + "\n";
   }
   if (valores['M'] !== "") {
-  mensagem += "*Visita Soube Através*: " + valores['M'] + "\n";
+    mensagem += "*Descrição das Despesas*: " + valores['M'] + "\n";
+  }
+
+  if (valores['F'] !== "") {
+    mensagem += "*Visita(s)*: " + valores['F'] + "\n";
+  }
+  if (valores['G'] !== "") {
+    mensagem += "*Ingresso(s)*: " + valores['G'] + "\n";
+  }
+  if (valores['I'] !== "") {
+  mensagem += "*Nome(s) do(s) Ingressante(s)*: " + valores['I'] + "\n";
+  }
+  if (valores['P'] !== "") {
+  mensagem += "*Contato(s) do(s) Ingressante(s)*: " + valores['P'] + "\n";
+  }
+  if (valores['S'] !== "") {
+  mensagem += "*Visita Soube Através*: " + valores['S'] + "\n";
+  }
+
+  if (valores['H'] !== "") {
+    mensagem += "*Conquista(s)*: " + valores['H'] + "\n";
+  }
+  if (valores['J'] !== "") {
+  mensagem += "*Nome(s) da(s) Conquista(s)*: " + valores['J'] + "\n";
   }
 
   if (valores['N'] !== "") {
-    mensagem += "*Conquista(s)*: " + valores['N'] + "\n";
+  mensagem += "*Título da Temática*: " + valores['N'] + "\n";
   }
   if (valores['O'] !== "") {
-  mensagem += "*Nome(s) da(s) Conquista(s)*: " + valores['O'] + "\n";
+  mensagem += "*Partilhador da Temática*: " + valores['O'] + "\n";
   }
 
-  if (valores['V'] !== "") {
-  mensagem += "*Título da Temática*: " + valores['V'] + "\n";
-  }
-  if (valores['W'] !== "") {
-  mensagem += "*Partilhador da Temática*: " + valores['W'] + "\n";
+  if (valores['Q'] !== "") {
+  mensagem += "*Eleição de Encargo*: " + valores['Q'] + "\n";
   }
 
-  if (valores['U'] !== "") {
-  mensagem += "*Eleição de Encargo*: " + valores['U'] + "\n";
+  if (valores['R'] !== "") {
+  mensagem += "*Observações*: " + valores['R'] + "\n";
   }
 
-  if (valores['Y'] !== "") {
-  mensagem += "*Observações*: " + valores['Y'] + "\n";
-  }
-
-  if (valores['X'] !== "") {
-  mensagem += "*Informações Adicionais*: " + valores['X'];
+  if (valores['T'] !== "") {
+  mensagem += "*Informações Adicionais*: " + valores['T'];
   }
 
   // Exibir log da mensagem montada
