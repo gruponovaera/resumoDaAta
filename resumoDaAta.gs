@@ -130,12 +130,12 @@ function resumoDaAta() {
   mensagem += "*Eleição de Encargo*: " + valores['Q'] + "\n";
   }
 
-  if (valores['R'] !== "") {
-  mensagem += "*Observações*: " + valores['R'] + "\n";
+  if (valores['T'] !== "") {
+  mensagem += "*Informações Adicionais*: " + valores['T'] + "\n";
   }
 
-  if (valores['T'] !== "") {
-  mensagem += "*Informações Adicionais*: " + valores['T'];
+  if (valores['R'] !== "") {
+  mensagem += "*Observações*: " + valores['R'];
   }
 
   // Exibir log da mensagem montada
