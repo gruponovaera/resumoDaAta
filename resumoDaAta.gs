@@ -3,15 +3,8 @@ function enviarMensagemWhatsApp(mensagem) {
   var apiKey = "Token"; // Substituir pelo seu Token da API
 
   var payload = {
-    number: "+5571999887766", // Substituir pelo número ou ID do grupo
-    options: {
-      delay: 1200,
-      presence: "composing",
-      linkPreview: false,
-    },
-    textMessage: {
-      text: mensagem,
-    },
+    "number": "+5571999887766", // Substituir pelo número ou ID do grupo
+    "text": mensagem // Na versão 2.x, a mensagem é enviada diretamente como "text"
   };
 
   var options = {
